@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    alert("Vou pensar em número e você tenta advinhar, ok?")
+    var n = parseInt(prompt("Ah, você que define o limite. Devo pensar em um número de zero a quanto?"))
+
+    var numeroPensado = Math.round(Math.random()*n);
+    var chute = parseInt(prompt("Pensei em um número de zero a " +n+ ". Qual você acha que é?"));
+
+    if (chute == numeroPensado) {
+        mostra("Você acertou! Realmente pensei no número "+numeroPensado);
+    } else {
+        mostra("Você errou!");
+        if (numeroPensado<chute) {
+            mostra("Eu pensei em um número menor.");
+        } else {
+            mostra("Eu pensei em um número maior.");
+        }
+        mostra("O número que eu pensei foi...")
+        mostra("<h1>"+numeroPensado+"</h1>")
+    }
+
+
+
+</script>

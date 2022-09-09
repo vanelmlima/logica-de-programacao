@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    alert("Advinhe o número");
+    var n = parseInt(prompt("Vou pensar em número e você tenta advinhar, ok? \n Ah, você que define o limite. Devo pensar em um número de zero a quanto?"));
+
+    var numeroPensado = Math.round(Math.random()*n);
+    alert("Pensei em um número de zero a " +n)
+    var tentativas = 3;
+    
+    while (tentativas > 0) {
+
+        var chute = parseInt(prompt("Qual você acha que é? Restam "+tentativas+ " tentativas."));
+        tentativas = tentativas - 1;
+        
+        if (chute == numeroPensado){
+            mostra("<h1> ACERTOU! Eu realmente pensei no número "+numeroPensado+"</h1>");
+            break;
+        } else if (chute < numeroPensado) {
+            alert("Errou! O número que eu pensei é maior.")
+        } else {
+            alert("Errou! O número que eu pensei é menor.")
+        };
+        
+        if (tentativas == 0) {
+            mostra("<h1> Não foi dessa vez, o número era " + numeroPensado+"</h1>");
+        };
+    };
+ 
+</script>

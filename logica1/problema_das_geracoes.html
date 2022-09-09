@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha(){
+
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+	function mostraTitulo(titulo) {
+		document.write("<h1>"+titulo+"</h1>");
+	}
+
+	var anoAtual = 2022
+	var anosDesde1500 = anoAtual - 1500
+	var mediaIdadeQueTemFilhos =  28
+	var geracoes =  Math.round(anosDesde1500/mediaIdadeQueTemFilhos)
+
+	mostraTitulo('Gerações desde 1500')
+	mostra("Desde 1500 se passaram "+anosDesde1500+" anos.");
+	mostra("Com uma média de "+mediaIdadeQueTemFilhos+" anos por geração, são "+geracoes+" gerações.")
+
+</script>
